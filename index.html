@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KINNAURI SONGS</title>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<script src="typing.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+	<header>
+		
+			
+		<nav class="container">
+		   
+			<div class="kinnauri">
+				<a href="index.html">	
+			    		<i class="fa fa-music" aria-hidden="true"></i>
+			  		KINNAURI SONGS
+		</a>
+</div>
+			<div class="phari">
+				<a href="index.html">	
+			    
+				  		PHARI SONGS
+				</a>
+			</div>
+			<div class="about">
+				<a href="index.html">	
+			   
+			  	ABOUT
+				</a>			
+			</div>
+			<div class="more">
+				<a href="javascript:;" onclick="dropdown()">	
+			   	MORE
+				<i class="fas fa-caret-down"></i>
+				</a>
+				<ul id="innermore">
+					<li>DEVELOPER GUIDE</li>
+					<hr>
+					<li>TRAVEL</li>
+					<hr>
+					<li>IMAGES</li>
+					<hr>
+				</ul>			
+			</div>
+			<div>
+			<i class="fab fa-facebook-square" style="padding:10px;"></i>
+			<i class="fab fa-twitter" style="padding:10px;"></i>
+			<i class="fab fa-instagram" style="padding:10px;"></i>
+			<i class="fab fa-linkedin-in" style="padding:10px;"></i>
+			</div>
+		</nav>
+	</header>
+<body onload="myFunction()">
+<div id="typingtext"></div>
+<div id="back">
+</div>
+<input type="range" id="seek" value="0" max=""/>	
+	<div class="sidenav">
+		<button title="next"><i class="fas fa-step-backward fa-2x" ></i></button>
+		<hr>		
+		<button title="play" onclick="mainplayer() "><i class="fas fa-play fa-2x" id="lly" ></i></button>
+		<hr>		
+		<button title="next" id="agla"><i class="fas fa-step-forward fa-2x"></i></button>
+	</div>
+ 		
+		<h2 id="first">Trending</h2>		
+		<div class="trending">
+		<div><a href="try.mp3"><img src="cover.jpg" style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div><a href="try2.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div><a href="try3.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div><a href="try.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div><a href="try2.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div><a href="try3.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div><a href="try.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div><a href="try2.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div><a href="try3.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>		
+</div>
+<audio src="" id="player">
+Your browser does not support the audio element.
+</audio> 
+<script>
+player();
+function player(){var current=0;
+	$("#player")[0].src=$(".trending div a");
+	$("#player")[0].play();
+	$(".trending div a").click(function(e){
+	e.preventDefault();
+	$("#player")[0].src=this;
+	$("#player")[0].play();	
+	current=$(this).parent().index();	
+	});
+	$("#player")[0].addEventListener("ended",function(){
+	current++;
+	if(current==$(".trending div a").length)
+	current=0;
+	$("#player")[0].src=$(".trending div a")[current].href;
+	});
+	
+
+}
+//$(document).ready(function(){
+var t=$(".trending");
+var pos=t.offset();
+$(window).scroll(function(){var windowpos=$(window).scrollTop();
+if(windowpos>=80)
+t.addClass("topEffect");
+else
+t.removeClass("topEffect");
+});
+//});
+
+
+
+</script>
+<div id="second"></div>	
+</body>
+</html>
