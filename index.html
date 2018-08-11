@@ -54,21 +54,29 @@
 		</nav>
 	</header>
 <body onload="myFunction()">
-<div id="typingtext"></div>
+
+
 <div id="back">
 </div>
 <input type="range" id="seek" value="0" max=""/>	
-	<div class="sidenav">
+	<!--<div class="sidenav">
 		<button title="next"><i class="fas fa-step-backward fa-2x" ></i></button>
 		<hr>		
 		<button title="play" onclick="mainplayer() "><i class="fas fa-play fa-2x" id="lly" ></i></button>
 		<hr>		
 		<button title="next" id="agla"><i class="fas fa-step-forward fa-2x"></i></button>
-	</div>
+	</div>-->
  		
-		<h2 id="first">Trending</h2>		
+				
 		<div class="trending">
-		<div><a href="try.mp3"><img src="cover.jpg" style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
+		<div id="typingtext"></div>
+			<div id="ft">
+			<div class="front">1</div>
+			<div class="frontb">2</div>			
+			</div>
+		<div id="st">2</div>
+		<div id="dt">3</div>
+		<!--<div><a href="try.mp3"><img src="cover.jpg" style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
 		<div><a href="try2.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
 		<div><a href="try3.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
 		<div><a href="try.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
@@ -76,7 +84,7 @@
 		<div><a href="try3.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
 		<div><a href="try.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
 		<div><a href="try2.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>
-		<div><a href="try3.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>		
+		<div><a href="try3.mp3"><img src="cover.jpg"style="width:90px;height:100px;margin-bottom:100%;"></img></a></div>-->		
 </div>
 <audio src="" id="player">
 Your browser does not support the audio element.
@@ -102,14 +110,14 @@ function player(){var current=0;
 
 }
 //$(document).ready(function(){
-var t=$(".trending");
+/*var t=$(".trending");
 var pos=t.offset();
 $(window).scroll(function(){var windowpos=$(window).scrollTop();
 if(windowpos>=80)
 t.addClass("topEffect");
 else
 t.removeClass("topEffect");
-});
+});*/
 //});
 
 

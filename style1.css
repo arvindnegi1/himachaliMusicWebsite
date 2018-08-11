@@ -27,6 +27,8 @@ a {text-decoration:none;
 	justify-content:space-around;
 	flex:1;
 	position:fixed;
+	z-index:4;
+	
 	}
 .more{width:190px;}
 
@@ -104,9 +106,12 @@ a {text-decoration:none;
 	padding-top:10px;
 	position:absolute;
 	font-size:50px;
-	margin-top:50px;
-	margin-left:400px;	
-color:#556B2F;	
+	
+	margin-left:400px;
+
+color:blue;	
+
+
 
 	}
 #innermore{float:none;
@@ -154,27 +159,22 @@ position:fixed;
 	
 	
 	
-	margin-left:15%;
-	height:25%;
-	width:60%;
+	//margin-left:15%;
+	height:60%;
+	width:100%;
 	background-color:black;
-	opacity:0.8;
-	overflow-x:scroll;
-	overflow-y:hidden;
+	opacity:0.9;
 	
+	position:relative;
 	white-space:nowrap;
-	
+	margin-top:16px;
+	z-index:3;
 	
 	}
 .trending>div{display:inline-block;
 margin:20px;
 }
-#first{
-	color:blue;
-	margin-top:10%;
-	margin-left:15%;
-	
-}
+
 #second{
 	margin-top:100%;
 	background-color:black;
@@ -197,5 +197,77 @@ height:50%;
 100% {background-color:red;margin-left:2%;height:0%;width:0%;}
 
 }
-
-	
+#ft{height:15%;
+width:5%;	
+text-align:center;
+	//padding-top:10px;
+	position:relative;
+	font-size:50px;
+	margin-top:20%;
+	margin-left:20%;
+background-color:yellow;
+animation-name:trend;
+animation-duration:1s;
+color:green;
+perspective:1000px;
+backface-visibility:hidden;	
+}
+#st{height:15%;
+width:5%;
+	text-align:center;
+	padding-top:10px;
+	position:relative;
+	font-size:50px;
+	margin-top:20%;
+	margin-left:20%;
+background-color:white;
+animation-name:new;
+animation-duration:2s;
+color:green;	
+}
+#dt{height:15%;
+width:5%;
+	text-align:center;
+	padding-top:10px;
+	position:relative;
+	font-size:50px;
+	margin-top:20%;
+	margin-left:20%;
+background-color:blue;
+animation-name:old;
+animation-duration:3s;
+color:green;	
+}
+@keyframes trend
+{0%{background-color:red;margin-left:2%;margin-top:10%;}
+/*25%{background-color:red;margin-left:2%;margin-top:13%;}
+50%{background-color:blue;margin-left:8%;margin-top:15%;}
+75%{background-color:yellow;margin-left:15%;margin-top:18%;}*/
+100%{background-color:green;margin-left:20%;margin-top:20%;}
+}
+@keyframes new
+{0%{background-color:red;margin-left:1%;margin-top:10%;}
+/*25%{background-color:red;margin-left:2%;margin-top:13%;}
+50%{background-color:blue;margin-left:8%;margin-top:15%;}
+75%{background-color:yellow;margin-left:20%;margin-top:18%;}*/
+100%{background-color:green;margin-left:20%;margin-top:20%;}
+}
+@keyframes old
+{0%{background-color:red;margin-left:1%;margin-top:10%;}
+/*25%{background-color:red;margin-left:2%;margin-top:13%;}
+50%{background-color:blue;margin-left:30%;margin-top:15%;}
+75%{background-color:yellow;margin-left:40%;margin-top:18%;}*/
+100%{background-color:green;margin-left:20%;margin-top:20%;}
+}
+.front {height:100%;
+width:100%;
+//margin-top:0%;
+background-color:green;
+position:absolute;
+}
+.frontb
+{height:100%;
+width:100%;
+margin-top:0%;
+position:relative;
+}
