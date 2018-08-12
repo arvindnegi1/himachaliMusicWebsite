@@ -4,7 +4,7 @@ var p;
 var temp1=1;
 var temp2="LOVE";
 var j=13;
-var i;
+var i=0;
 function myFunction()
 {
 document.getElementById("typingtext").style.color="blue";
@@ -13,25 +13,31 @@ if(a<dat.length)
 		
 	a++;
 
-	setTimeout(myFunction,140);}
+	setTimeout(myFunction,350);}
 else
 {j=13;
 i=9;
+document.getElementById("typingtext").innerHTML="MUSIC IS ";
 del();
 }
 }
 function del(){
-document.getElementById("typingtext").innerHTML="MUSIC IS ";
-for(i=9;i<j;i++)
-{document.getElementById("typingtext").innerHTML+=dat.charAt(i);}
+
+if(i<j)
+{document.getElementById("typingtext").innerHTML+=dat.charAt(i);
+i++;
+j--;
+setTimeout(del,300);
+}
 j--;
 if(j==8)
 {var temp3=0;
-var i=0;
-document.getElementById("typingtext").style.color="orange";
+i=0;
+//document.getElementById("typingtext").style.color="orange";
+document.getElementById("typingtext").innerHTML="MUSIC IS ";
 re();
 }
-setTimeout(del,300);
+
 /*if(temp1==1)
 	{document.getElementById("typingtext").innerHTML="MUSIC IS LIF";
 	temp1++;
@@ -63,21 +69,24 @@ else if(temp1==4)
 setTimeout(del,300);*/
 }
 function re(){
-document.getElementById("typingtext").innerHTML="MUSIC IS ";
-for(i=0;i<=3;i++)
+
+if(i<=4)
 	{document.getElementById("typingtext").innerHTML+=temp2.charAt(i);
-	}
-temp3++;	
+	i++;	
+	setTimeout(re,300);
+	}	
 	//document.getElementById("typingtext").innerHTML=temp3;
 //if(i>4)
 	//{//document.getElementById("typingtext").innerHTML="MUSIC IS LIFE";
 	
 
 	//}
-//else
-setTimeout(re,1000);
+else
+{a=0;
+document.getElementById("typingtext").innerHTML="";
+myFunction();
 }
-
+}
 function dropdown()
 	{var x;
 	var temp;

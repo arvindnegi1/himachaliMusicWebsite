@@ -213,27 +213,26 @@ animation-duration:1s;
 color:green;	
 
 }
-#st{height:15%;
-width:5%;
-	text-align:center;
-	padding-top:10px;
+#st{height:30%;
+width:20%;
+	
+	
 	position:absolute;
 	font-size:50px;
-	margin-top:20%;
-	margin-left:50%;
-background-color:white;
+	margin-top:19%;
+	margin-left:40%;
 animation-name:new;
-animation-duration:2s;
+animation-duration:1s;
 color:green;	
 }
-#dt{height:15%;
-width:5%;
+#dt{height:30%;
+width:20%;
 	text-align:center;
-	padding-top:10px;
+	
 	position:absolute;
 	font-size:50px;
-	margin-top:20%;
-	margin-left:80%;
+	margin-top:19%;
+	margin-left:70%;
 background-color:blue;
 animation-name:old;
 animation-duration:2s;
@@ -241,24 +240,24 @@ color:green;
 }
 @keyframes trend
 {0%{background-color:red;margin-left:2%;margin-top:10%;}
-/*25%{background-color:red;margin-left:2%;margin-top:13%;}
-50%{background-color:blue;margin-left:8%;margin-top:15%;}
+25%{transform: rotateY(180deg);}
+/*50%{background-color:blue;margin-left:8%;margin-top:15%;}
 75%{background-color:yellow;margin-left:15%;margin-top:18%;}*/
 100%{background-color:green;margin-left:10%;margin-top:19%;}
 }
 @keyframes new
 {0%{background-color:red;margin-left:2%;margin-top:10%;}
 /*25%{background-color:red;margin-left:2%;margin-top:13%;}
-50%{background-color:blue;margin-left:8%;margin-top:15%;}
-75%{background-color:yellow;margin-left:20%;margin-top:18%;}*/
-100%{background-color:green;margin-left:50%;margin-top:20%;}
+50%{background-color:blue;margin-left:8%;margin-top:15%;}*/
+75%{transform: rotateY(180deg);}
+100%{background-color:green;margin-left:40%;margin-top:19%;}
 }
 @keyframes old
 {0%{background-color:red;margin-left:2%;margin-top:10%;}
 /*25%{background-color:red;margin-left:2%;margin-top:13%;}
-50%{background-color:blue;margin-left:30%;margin-top:15%;}
-75%{background-color:yellow;margin-left:40%;margin-top:18%;}*/
-100%{background-color:green;margin-left:80%;margin-top:20%;}
+50%{background-color:blue;margin-left:30%;margin-top:15%;}*/
+75%{transform: rotateY(180deg);}
+100%{background-color:green;margin-left:70%;margin-top:19%;}
 }
 .front {height:100%;
 width:100%;
@@ -297,12 +296,36 @@ height:100%;
 opacity:1;
 
 }
+#st{
+	transition: 0.8s;
+	transform-style: preserve-3d;
+}
+#st:hover{transform: rotateY(180deg);}
+#dt{transition: 0.8s;
+transform-style: preserve-3d;
+}
+#dt:hover{transform: rotateY(180deg);}
 .fa-headphones{
 color:#BC8F8F;
 margin-top:6%;
-margin-right:30%;
+margin-right:40%;
 size:7x;}
 #tt{color:#FFD700;
 padding:20%;
 margin-bottom:100%;
 font-size:30px;}
+#tt2{color:green;
+padding-top:0%;
+padding-right:10%;
+font-size:28px;
+}
+#st>div{background-color:yellow;}
+.fa-gratipay{color:red;
+margin-right:40%;
+margin-top:0%;
+}
+#tt3{margin-right:35%;
+	font-size:30px;}
+.fa-headset{color:black;
+margin-right:40%;
+}
