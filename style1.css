@@ -4,7 +4,7 @@
 html,body{height:100%;
 	width:100%;
 	}
-div{padding-top:10px;}
+/*div{padding-top:10px;}*/
 body{position:relative;}
 a {text-decoration:none;
     
@@ -20,18 +20,20 @@ a {text-decoration:none;
 
 
 .container{background-color:#2F4F4F;
+	
 	display:flex;
 	flex-direction:row;
 	height:40px;
 	width:100%;	
 	justify-content:space-around;
 	flex:1;
+	top:0;	
 	position:fixed;
 	z-index:4;
 	
 	}
 .more{width:190px;}
-
+.kinnauri,.phari,.about,.more{padding-top:10px;}
 .kinnauri:hover{-webkit-transition: background-color 3s;
     -moz-transition:    background-color 3s;
     -ms-transition:     background-color 3s;
@@ -103,7 +105,7 @@ a {text-decoration:none;
 #typingtext{height:10%;
 	color:black;
 	text-align:center;
-	padding-top:10px;
+	padding-top:40px;
 	position:absolute;
 	font-size:50px;
 	
@@ -159,8 +161,8 @@ position:fixed;
 	
 	
 	
-	//margin-left:15%;
-	height:60%;
+	/*margin-left:15%;*/
+	height:70%;
 	width:100%;
 	background-color:black;
 	opacity:0.9;
@@ -171,9 +173,9 @@ position:fixed;
 	z-index:3;
 	
 	}
-.trending>div{display:inline-block;
+/*.trending>div{display:inline-block;
 margin:20px;
-}
+}*/
 
 #second{
 	margin-top:100%;
@@ -197,29 +199,28 @@ height:50%;
 100% {background-color:red;margin-left:2%;height:0%;width:0%;}
 
 }
-#ft{height:15%;
-width:5%;	
+#ft{height:30%;
+width:20%;	
 text-align:center;
-	//padding-top:10px;
-	position:relative;
-	font-size:50px;
-	margin-top:20%;
-	margin-left:20%;
-background-color:yellow;
+	
+	position:absolute;
+	font-size:22px;
+	margin-top:19%;
+	margin-left:10%;
+background-color:black;
 animation-name:trend;
 animation-duration:1s;
-color:green;
-perspective:1000px;
-backface-visibility:hidden;	
+color:green;	
+
 }
 #st{height:15%;
 width:5%;
 	text-align:center;
 	padding-top:10px;
-	position:relative;
+	position:absolute;
 	font-size:50px;
 	margin-top:20%;
-	margin-left:20%;
+	margin-left:50%;
 background-color:white;
 animation-name:new;
 animation-duration:2s;
@@ -229,13 +230,13 @@ color:green;
 width:5%;
 	text-align:center;
 	padding-top:10px;
-	position:relative;
+	position:absolute;
 	font-size:50px;
 	margin-top:20%;
-	margin-left:20%;
+	margin-left:80%;
 background-color:blue;
 animation-name:old;
-animation-duration:3s;
+animation-duration:2s;
 color:green;	
 }
 @keyframes trend
@@ -243,31 +244,65 @@ color:green;
 /*25%{background-color:red;margin-left:2%;margin-top:13%;}
 50%{background-color:blue;margin-left:8%;margin-top:15%;}
 75%{background-color:yellow;margin-left:15%;margin-top:18%;}*/
-100%{background-color:green;margin-left:20%;margin-top:20%;}
+100%{background-color:green;margin-left:10%;margin-top:19%;}
 }
 @keyframes new
-{0%{background-color:red;margin-left:1%;margin-top:10%;}
+{0%{background-color:red;margin-left:2%;margin-top:10%;}
 /*25%{background-color:red;margin-left:2%;margin-top:13%;}
 50%{background-color:blue;margin-left:8%;margin-top:15%;}
 75%{background-color:yellow;margin-left:20%;margin-top:18%;}*/
-100%{background-color:green;margin-left:20%;margin-top:20%;}
+100%{background-color:green;margin-left:50%;margin-top:20%;}
 }
 @keyframes old
-{0%{background-color:red;margin-left:1%;margin-top:10%;}
+{0%{background-color:red;margin-left:2%;margin-top:10%;}
 /*25%{background-color:red;margin-left:2%;margin-top:13%;}
 50%{background-color:blue;margin-left:30%;margin-top:15%;}
 75%{background-color:yellow;margin-left:40%;margin-top:18%;}*/
-100%{background-color:green;margin-left:20%;margin-top:20%;}
+100%{background-color:green;margin-left:80%;margin-top:20%;}
 }
 .front {height:100%;
 width:100%;
-//margin-top:0%;
-background-color:green;
+
+background-color:#2F4F4F;
 position:absolute;
+backface-visibility:hidden;
+transform: rotateY(0deg);
+/*opacity:0.8;*/
+color:#8B0000;
+text-align:right;
+border:4px solid green;
+border-radius:10px;
 }
 .frontb
 {height:100%;
 width:100%;
-margin-top:0%;
-position:relative;
+margin:0%;
+position:absolute;
+backface-visibility:hidden;
+transform: rotateY(180deg);
+border:4px solid yellow;
+border-radius:10px;
+opacity:1;
 }
+#ft{transition: 0.8s;
+	transform-style: preserve-3d;
+}
+#ft:hover{transform: rotateY(180deg);}
+.fa-facebook-square:hover{color:blue;
+background-color:yellow;	
+}
+
+.frontb>img{width:100%;
+height:100%;
+opacity:1;
+
+}
+.fa-headphones{
+color:#BC8F8F;
+margin-top:6%;
+margin-right:30%;
+size:7x;}
+#tt{color:#FFD700;
+padding:20%;
+margin-bottom:100%;
+font-size:30px;}
